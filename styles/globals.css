@@ -6,4 +6,7 @@
   .icon {
     @apply hidden lg:inline-flex p-2 w-10 h-10 text-gray-700 bg-gray-200 hover:bg-gray-300 cursor-pointer rounded-full;
   }
+  .inputIcon {
+    @apply flex items-center space-x-1 p-2 hover:bg-gray-100 rounded-xl cursor-pointer justify-center flex-grow;
+  }
 }

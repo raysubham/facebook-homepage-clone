@@ -13,7 +13,8 @@ import {
 } from '@heroicons/react/solid'
 import logo from './assets/fb-logo.png'
 import { HeaderIcon } from './HeaderIcon'
-import { session, signOut, useSession } from 'next-auth/client'
+import { signOut, useSession } from 'next-auth/client'
+
 export const Header = () => {
   const [session] = useSession()
   return (
@@ -50,9 +51,10 @@ export const Header = () => {
           height={40}
           layout='fixed'
         />
-        <p className='font-semibold pr-3 whitespace-nowrap pt-1'>
+        <p className='pl-2 hidden sm:inline-flex font-semibold pr-3 whitespace-nowrap pt-1'>
           {session.user.name}
         </p>
+
         <ViewGridIcon className='icon' />
         <ChatIcon className='icon' />
         <BellIcon className='icon' />
@@ -61,6 +63,3 @@ export const Header = () => {
     </div>
   )
 }
-
-
-//start from Sidebar 1.31
